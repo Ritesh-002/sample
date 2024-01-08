@@ -1,0 +1,531 @@
+PYTHON NOTES
+
+IMPORTANT POINTS
+-> """multiline 
+	comments"""
+-> string functions
+	-> concat
+	-> len()
+	-> replace
+	-> upper
+	-> lower
+-> modules in python
+	-> Machine Learning
+	-> GUI Applications (like Kivy, Tkinter, PyQt etc. )
+	-> Web frameworks like Django (used by YouTube,
+	Instagram, Dropbox)
+	-> Image processing (like OpenCV, Pillow)
+	-> Web scraping (like Scrapy, BeautifulSoup, Selenium)
+	-> Test frameworks
+	-> Multimedia
+	-> Scientific computing
+	-> Text processing and many more.
+-> an object may be a variable and function also
+-> if you try to concatenate string and number using concatenating operater ie, + then it will throw an error
+-> python does not have character data type but is only string of length 1
+-> error in python are of two type = syntax error, exception
+
+NAMESPACE
+-> namespace is defined as the system of assigning names python also write name with this namespace system in its inbuilt methods or object
+-> the lifetime of a namspace if the scope of a object comes to an end then the lifetime of that namespace comes to end.
+-> global
+-> local(contain local also)
+-> builtin(contain global, local both)
+
+TYPECASTING
+-> to int
+	-> a = int(3)
+-> to float
+	-> a = float(3)
+-> to string
+	-> a = str(3)
+
+TYPE
+-> get the type
+	-> print(type(x))
+
+ASSIGNING MULTIPLE VALUES
+-> x, y, z = "aple", "mango", 3
+UNPACKING A LIST
+-> extracting values from a collection data type is known as unpacking
+-> fruits = ["apple", "mango", "banana"]
+-> x, y, z = fruits
+CREATING GLOBAL VALUE INSIDE A FUNCTION
+-> using global keyword (global x)
+
+STANDARD DATA TYPES
+-> numbers
+-> string
+-> list
+-> tuple 
+-> dictionary
+
+BUILT IN DATA TYPE
+-> text type = str
+-> numeric type = int, float, complex
+-> sequence type = list, tuple, range
+-> mapping type = dict
+-> boolean type = bool
+-> set types = frozen set, set
+-> binary types = bytes, bytearrar, memoryview
+
+BYDEFAULT INPUT FUNCTION RETURN STRING
+-> to convert into numeric we have to typecast
+
+7 TYPES OF OPERATOR
+-> arithmetic (exp = **, floor division = //, equal arithmetic
+-> relational
+-> logical
+-> assignment
+-> bitwise
+-> identity
+-> membership
+
+COLLECTION DATA TYPES
+-> list
+-> tuple
+-> set
+-> dictionary
+
+LIST
+-> brackets used
+-> features
+	-> ordered
+	-> changeable
+	-> allows duplicates
+-> operations on list
+	-> access = list[1], list[-1] = negative indexing means start from last index, list[2:5] = accessing range
+	-> check items
+	-> append = list.append("grapes")
+	-> insert = list.insert(1, "apple")
+	-> remove = list.remove("banana"), del list[1], list.pop(1) = removing second element, if dont specified index it will remove last element
+	-> clear = list.clear()
+	-> listcopy = new list = thislist.copy() or new list = list(thislist)
+	-> length = len(list)
+	-> extend = thislist.extend(newlist)
+
+TUPLES
+-> parenthesis used
+-> features
+	-> ordered
+	-> unchangeable
+	-> allows duplicates
+-> operations on list
+	-> access = list[1], list[-1] = negative indexing means start from last index, list[2:5] = accessing range
+	-> check items
+	-> length = len(list)
+	-> deleting tuple = del thistuple
+	-> concatenating two tuples = tuple3 = tuple1 + tuple2 (will concatenate all elements in one tuple)
+	-> nesting of tuples = tuple3 = (tuple1, tuple2)
+	-> converting list to tuple = mytuple = tuple(mylist)
+
+DICTIONARY
+-> curly brace use
+-> features
+-> ordered
+-> changeable
+-> does not allow duplicate (can't have 2 elements with the same key
+-> operations in dictionary
+	-> access = using key or get function = el = thisdict["model"] or el = thisdict.get("model")
+	-> get all the keys = thisdict.keys()
+	-> get all the values = thisdict.values()
+	-> get all the items = thisdict.items()
+	-> adding element = thisdict["color"] = "red" or update method = thisdict.update({"color":"red"})
+	-> removing element = pop method = thisdict.pop("model") or del keyword = del thisdict["model"]
+	-> to delete a dictionary = del thisdict
+	-> clear the dictionary = thisdict.clear()
+
+SETS
+-> uses curly brace
+-> features
+	-> unordered
+	-> does not allow duplicates
+	-> unchangeable (here unchangeable doesn't mean to change the set but it mean not to change the existing individual value of the set)
+-> can contain different data types as like above
+-> operations in set
+	-> length = len(thisset)
+	-> check if
+	-> adding = thisset.add("orange")
+	-> removing = thisset.remove("orange") or discard operator thisset.discard("banana")
+	-> updating set = thisset.update(newset)
+	-> clear set = thisset.clear()
+	-> delete set = del thisset
+	-> union = set1.union(set2)
+	-> intersection = set1.intersection_update(set2) or set1.intersection(set2)
+	-> ele are not present in both = set1.symmetric_difference_update(set2)
+
+STRING 
+-> character array representation
+-> operations for string
+	-> length = len(str)
+	-> access = str[1]
+	-> concatenation = str1+str2
+	-> check if = "r" in "ritesh"
+	-> accessing range(slicing) = str[2:5] from start str[:5] from end str[1:] negative = from end
+	-> uppercase = str.upper()
+	-> lowercase = str.lower()
+	-> removing white spaces = str.strip()
+	-> replace string = str1.replace(str2) or str1.replace("h", "j")
+	-> split string = str.split(",") if , is present then it will seperate the string in two sub strings (one before this comma one after this comma)
+	-> to concatenate number with string use format method = for ex
+		str = "my age is {}"
+		print(str.format(20)) 		output = my age is 20
+
+ESCAPE CHARACTERS
+-> we use escape characters for special symbols to write in a string
+for eg it is invalid to write "ritesh "is" a " instead we have to write "ritesh \"is\" a ")
+-> ex = for new line = \n, for tab = \t, for \b = for backspace,\xhh = for hex value
+
+FUNCTIONS
+-> definition
+	-> types
+		-> user defined
+		-> built in
+-> syntax
+	-> def function_name(parameter1, parameter2, ...):
+		statement1
+		return
+-> function prototype or declaration, function definition, function calling
+	-> types of declaring a function
+		-> without arg and without return type
+		-> without arg with return type
+		-> with arg without return type
+		-> with arg and with return type
+	in return type functions there is only little bit change that is:
+	just write return at the end of the statement of the function
+
+DIFFERENCE BETWEEN PARAMETERS AND ARGUMENTS
+-> parameters are passed in function definition
+-> argumens are passed in function calling
+
+ARGUMENT TYPES
+-> required argument = strict number of arg with strict number of parameters
+-> default argument = assigning value at the time of parameters
+-> keyword argument = assgning the values at the time of function calling
+-> variable length argument
+
+MODULES
+-> file containing functions definition, statements etc
+-> import statements is used
+-> for ex import math
+	-> now we can use math's file functions like math.sqrt(16)
+-> from key word helps in importing function or attribute from a module
+-> for ex
+	-> from math import sqrt, factorial
+	-> print(sqrt(16)) # now we don't need to write math.sqrt(16) simply write sqrt(16)
+
+CLASS SYNTAX
+-> class dog:
+	attr
+	fun
+  #creating objects
+	-> rodger = dog()
+-> self is similar to this in java
+-> __init__ is similar to constructor in C++
+	def __init__()
+-> __del__ destructor
+	def __del__()
+
+UNIT - 2
+
+FILE HANDLING
+-> what are files
+-> standard files in python file handling
+	-> text
+	-> binary
+	-> csv
+	-> json
+-> advantages of using files
+-> advantages of file handling
+	-> versatility
+	-> flexibility
+	-> user-friendly
+	-> cross-platform
+-> disadvantages of file handling
+	-> error-prone
+	-> security risks
+	-> complexity
+	-> performance
+	
+-> modes
+	-> read(r) = file pointer at the beginning
+	-> write(w) = overridden, file pointer at the beginning
+	-> append(a) = not override, file pointer at the end
+	-> read and write(r+) = overriden writing, file pointer at the beginning
+	-> read and append(a+) = not override, file pointer at the end
+	-> write and read(w+) = override, file pointer at the beginning
+	-> rb = read in binary rest all are same
+	-> wb = write in binary rest all are same
+	-> ab = append in binary rest all are same
+-> to read the file 
+	-> use loop
+	-> for each in file_name:
+		print(each)
+	-> another method is read function	
+		fileptr.read()
+	-> similarliy we have write(), append() options
+
+FILE OBJECT ATTRIBUTES
+-> open (open function will close the file)
+-> mode
+-> read
+-> readline
+-> readlines
+-> write
+-> writeline
+-> writelines
+-> truncate
+-> tell (tell location of the fileptr from the beginning in the form of bytes)
+-> seek(offset, from_where) (used to change the file object position, offset indicate the number of byte to be moved, from_where indicate from where the filepointer has to move)
+-> close
+
+-> another method to perform file operations is 'with'
+	-> syntax = with open(file_name, mode) as fileptr:
+-> the major advantage of using with in file handling is that it automatically closes the file even if we don't write close function as well, it doesn't let the file to corrupt
+
+-> another mode to create or open a file is x the problem in x is that if file exists it will throgh an error
+
+EXCEPTION HANDLING
+-> error stops the program while exception execute the program completely, but changes the program flow.
+-> what is exception
+-> why exception handling (advantages)
+-> disadvantage of exception handling
+-> difference between syntax error and exception
+-> theory related to exception
+-> example of exception
+-> type of exception
+	-> NameError
+	-> ArithmeticError
+	-> TypeError
+	-> IOError
+	-> IndexError
+	-> KeyError
+	-> ValueError
+	-> ZeroDivisionError
+	-> IndentationError
+	-> RuntimeError
+	-> FileNotFoundError
+-> try, catch, else, finally
+-> multiple exception in single try block
+-> raising an exception (to stop the program and to raise a specific error)
+	-> it can be raised with message
+-> built in exception (raised by raise exception): these built in exception comes under baseException class all other built in exception is the instance of this class
+
+NAMESPACES
+-> definition(describes the scope of name in order to prevent conflict between two or more than 2 same names OR container that hold set of names)
+-> types of namespaces
+	-> global
+	-> local
+	-> module namespace
+	-> enclosing (nested functions)
+	-> built in namespace (built in functions)
+
+DIFFERENCE BETWEEN MODULES AND PACKAGES
+-> module is a single file containing definition statements etc.
+-> package is defined as the single directory heirarchy containing multiple modules group together
+
+PERSISTENT STORAGE
+-> persistent storage means to store and retreive data beyond the lifecycle of the program i.e., storing data permanently even if the power supply is cut off and the system is turned on/off again and again or even after when the program stopped running
+
+UNIT - 4
+GUI PROGRAMMING IN PYTHON
+-> what is gui
+-> advantages of gui over cli
+-> related modules of creating gui in python
+	-> tkinter
+	-> kivy
+	-> python Qt
+	-> wxPython
+
+TKINTER MODULE
+-> procedure
+	-> importing tkinter module-> creating the main window of the gui app-> adding widgets to the app-> enter the main event loop
+-> basic syntax
+	-> variable_name = widget_name(attributes)
+-> frame is similar to div tag of html
+-> widgets definition (15 types are available)
+	-> button
+	-> checkboxes
+	-> radio button
+	-> canvas
+	-> entry (similar to input tag in html)
+	-> frame
+	-> label (don't interact with user)
+		->label attributes
+		-> text
+		-> bd
+		-> fg
+		-> font
+		-> padx, pady
+	-> menu button
+	-> menu
+	-> message
+	-> scale
+	-> scrollbar
+	-> text
+-> inserting image
+	-> img = PhotoImage(name.png)
+	   photo_label = Label(image = img)
+-> Entry widget
+	-> entry_root = Entry(root, username = StringVar)
+		entry_root.grid()
+-> attribute mehtods
+	-> geometry("wxh")
+		-> root.minsize(w, h)
+		-> root.maxsize(w, h)
+	-> root.pack()
+		-> pack options
+		-> titile.pack(anchor = "se")
+	-> button
+		-> command = hello, where hello is the function 
+	-> root.grid(row=1, col=1) = similar to root.pack() but having different arguments
+-> variable class in tkinter
+	-> BooleanVar
+	-> IntVar
+	-> DoubleVar
+	-> StringVar
+-> menu
+	-> mymenu.add_command(command = quit)
+	-> mymenu.config(menu = mymenu)
+-> Listbox
+	-> lbx = Listbox(root)
+	-> lbx.insert(END, "first item of a list box")
+pending topics in tkinter = scrollbar, menu, submenu
+
+OTHER GRAPHICAL USER INTERFACE
+-> kivy
+	-> open source
+	-> operating systems
+	-> 100% free to use under MIT license
+	-> professionaly developed and backed toolkit
+	-> to install kivy
+		-> python pip install kivy
+	-> how to import it
+		-> import kivy
+		-> from kivy.app import App
+		-> from kivy.uix.button import Button
+-> PyQt5
+-> PySide 2
+-> wxPython
+-> libavg
+-> pyQt
+-> Pyforms
+-> wax
+-> tkinter
+	-> pmw
+	-> tix (for additional widgets)
+
+INTRODUCTION TO WEB PROGRAMMING IN PYTHON
+-> python frameworks
+	-> django
+	-> flask
+	-> fastAPI
+-> Web development concepts
+	-> http and restful API
+	-> template engine
+	-> ORM
+	-> routing and view
+	-> middleware
+-> database interaction	
+-> authentication and authorization
+-> web frontend
+-> deployment
+
+WEB SURFING
+-> refers to the activity of browsing or navigating through the world wide web using a web browser. it means exploring different websites, viewing web pages, navigating through hyperlinks
+-> to explain it more write about web browser, web servers, protocols etc.
+
+CGI
+-> common gateway interface
+-> theory related to it
+	-> interface between scripted programs and server
+	-> between client and server
+	-> between external gateway programs and server
+	-> dynamic interaction
+	-> communication
+	-> When a client sends a request to the webserver, the CGI programs execute that particular request and send back the result to the webserver
+	-> it's not a programming lanugage but a specification
+	-> there is a special directory in server side called cgi bin where cgi script is stored
+	-> The main objective of these script files is to retrieve the data from the database quickly and more efficiently
+-> procedure of web browser(file not found)
+-> cgi architecture
+-> diagram
+-> cgi program
+-> cgi functions
+
+
+DATABASE PROGRAMMING IN PYTHON
+-> import mysql.connector as mycon
+	my_db = mycon.connect(host = "hostname", user = "username", password = "password", database = "database")
+	my_db_cursor = my_db.cursor()
+	my_db_cursor.execute(delete from emp where name = %s)
+-> DB_API is same as the mysql.connector connecting module in database in python
+-> if ques come as DB-API write about the sql querries, connect function, execute function, cursor function
+-> diagram 
+	-> ide-> mysql connector-> mysql
+			|
+		        v
+		     db-api
+-> rollback returns the database into it's previous state
+
+ORM
+-> object relational mapping
+-> feature of ORM
+	-> object as entities
+	-> class entities
+	-> mapping framework	
+	-> relationship between entitites
+	-> ORM query language
+	-> CRUD operation
+	-> session management
+
+pending topics - command line arguments(unit-2), contex management(unit-2), assertions(unit-2), exception and the sys module(unit-2), CGI examples, environmental variables and function(unit-4), ORM(object relation managers), unit-3
+
+UNIT-3
+METACHARACTERS
+-> metacharacters are the characters with special meaning
+-> these meta characters are:
+	-> \ = vanishes the speciality of other symbol
+	-> . = matches any symbol except new line
+	-> [] = matches range of characters in a given string
+	-> ^ = matches the beginning
+	-> $ = matches the end
+	-> ? = matches 0 or 1 occurence of a character
+	-> * = matches any number of characters before or after the string
+	-> + = matches one or more occurence of characters
+	-> | = matches any of the characters seperated by it
+-> one of the example
+	-> import re
+		str = "my name is ritesh"
+		pattern = r"[a-r]"
+		match = re.findall(pattern, str)
+		print(match)
+-> other example
+	-> import re
+		str = "hello world!"
+		pattern = r"world!$"
+		match = re.search(pattern, str)
+		print(match)
+
+-> special sequence
+	-> \A = matches if the string begins with given character
+	-> \b = matches if the string begins or end with given character
+	-> \B = opposite of b
+	-> \d = matches if any character is a digit or not
+	-> \D = opposite of d
+	-> \s = matches if any character is white space or not
+	-> \S = opposite of s
+	-> \w = matches if any character is alphanumeric or not
+	-> \W = opposite of w
+
+-> methods in re module
+	-> finall
+	-> search
+	-> compile (compile all the characters to a single object or list)
+	-> sub
+	-> split
+	-> escape
+
+thread = object of operating system
+
+
